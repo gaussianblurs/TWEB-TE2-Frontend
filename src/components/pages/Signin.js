@@ -3,10 +3,10 @@ import { withRouter } from 'react-router-dom'
 
 class SignInPage extends React.Component {
 	constructor(props) {
-		super(props)
-	}
+    super(props)
+  }
 
-	render() {
+  render() {
 		return (
 			<div>Signin</div>
 		)
