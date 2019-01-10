@@ -24,6 +24,7 @@ class ComingSoon extends React.Component {
     this.fetchMovies()
   }
 
+  // Fetch pages recursively until all the pages were fetched
   fetchMovies = () => axios.get(`https://api.themoviedb.org/3/movie/upcoming?page=${this.state.page}&api_key=f1be4bafe6f7cb0cb84f5948c5b75497`)
     .then((response) => {
       this.setState(prevState => ({
@@ -47,7 +48,7 @@ class ComingSoon extends React.Component {
             {
               movies.map(movie => (
                 <Card key={movie.id}>
-                  <CardImg top height={200} src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={movie.title} />
+                  <CardImg top height={200} width="auto" src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={movie.title} />
                   <CardBody>
                     <CardTitle>{movie.title}</CardTitle>
                     <CardSubtitle>

@@ -20,6 +20,8 @@ class Home extends React.Component {
     }
   }
 
+  // Fetch movies and genres
+  // Genres are stored in a Map
   componentDidMount = () => {
     axios.get('https://api.themoviedb.org/3/movie/popular?page=1&api_key=f1be4bafe6f7cb0cb84f5948c5b75497')
       .then((response) => {
@@ -39,6 +41,7 @@ class Home extends React.Component {
       })
   }
 
+  // Select / deselect movie
   selectMovie = (index) => {
     const indexInSelectedMovies = this.state.selectedMovies.indexOf(index)
     const selectedMovies = [...this.state.selectedMovies]
