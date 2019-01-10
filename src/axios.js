@@ -1,7 +1,7 @@
 const axios = require('axios')
 
 const axiosInstance = axios.create({
-  baseURL: process.env.REACT_APP_ENV === 'production' ? 'https://tweb-te2-backend-gaussianblurs.herokuapp.com/' : 'http://localhost:8081'
+  baseURL: 'https://api.themoviedb.org/3/movie/popular?page=1&api_key=f1be4bafe6f7cb0cb84f5948c5b75497'
 })
 
 module.exports = axiosInstance
