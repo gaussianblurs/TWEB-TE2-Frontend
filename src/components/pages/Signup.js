@@ -1,6 +1,6 @@
 import React from 'react'
 import { withRouter } from 'react-router-dom'
-import axios from 'axios'
+import axios from '../../axios'
 
 class SignUpPage extends React.Component {
   constructor(props) {
@@ -11,7 +11,7 @@ class SignUpPage extends React.Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:8081/users')
+    axios.get('/users')
       .then((result) => {
         this.setState({
           users: result.data
